@@ -1,28 +1,21 @@
 {
   "compilerOptions": {
-    /* Output */
-    "target": "es2015",                // Modern JS syntax (or use "es2020", "esnext")
-    "module": "esnext",                // Allows using modern module system
-    "outDir": "./dist",                // Output directory for compiled JS
-    "rootDir": "./src",                // Folder where your TS code lives
-    "sourceMap": true,                 // Helps with debugging in browser dev tools
+    "target": "es2015",                // Or higher like "es2020"
+    "module": "esnext",                // Modern module support
+    "outDir": "./dist",                // Where the JS output goes
+    "rootDir": "./src",                // Where the TS files live
+    "sourceMap": true,                 // Optional, for browser debugging
 
-    /* Type support */
-    "lib": ["dom", "es2015"],          // Give access to DOM + ES6+ features
-    "strict": true,                    // Enables all strict type-checking options
-
-    /* Module resolution */
-    "moduleResolution": "node",       // How TypeScript finds imported modules
-    "esModuleInterop": true,          // Allow default imports from CommonJS modules
+    "lib": ["dom", "es2015"],          // Use DOM + modern JS APIs
+    "strict": true,                    // Strong typing
+    "moduleResolution": "node",
+    "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
 
-    /* Developer experience */
-    "noEmitOnError": true,            // Don't output JS if there's a type error
+    "noEmitOnError": true,
     "forceConsistentCasingInFileNames": true,
-
-    /* Other helpful options */
-    "skipLibCheck": true              // Speeds up compilation by skipping type checks in node_modules
+    "skipLibCheck": true
   },
-  "include": ["src/**/*"],            // Tell TypeScript to include all TS files in /src
-  "exclude": ["node_modules", "dist"] // Ignore build output and dependencies
+  "include": ["src/**/*"],             // All TS files in src/
+  "exclude": ["node_modules", "dist"]  // Skip dependencies + build output
 }

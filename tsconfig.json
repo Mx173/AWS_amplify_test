@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    /* Output */
+    "target": "es2015",                // Modern JS syntax (or use "es2020", "esnext")
+    "module": "esnext",                // Allows using modern module system
+    "outDir": "./dist",                // Output directory for compiled JS
+    "rootDir": "./src",                // Folder where your TS code lives
+    "sourceMap": true,                 // Helps with debugging in browser dev tools
+
+    /* Type support */
+    "lib": ["dom", "es2015"],          // Give access to DOM + ES6+ features
+    "strict": true,                    // Enables all strict type-checking options
+
+    /* Module resolution */
+    "moduleResolution": "node",       // How TypeScript finds imported modules
+    "esModuleInterop": true,          // Allow default imports from CommonJS modules
+    "allowSyntheticDefaultImports": true,
+
+    /* Developer experience */
+    "noEmitOnError": true,            // Don't output JS if there's a type error
+    "forceConsistentCasingInFileNames": true,
+
+    /* Other helpful options */
+    "skipLibCheck": true              // Speeds up compilation by skipping type checks in node_modules
+  },
+  "include": ["src/**/*"],            // Tell TypeScript to include all TS files in /src
+  "exclude": ["node_modules", "dist"] // Ignore build output and dependencies
+}
